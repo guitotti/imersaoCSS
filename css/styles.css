@@ -1,13 +1,54 @@
+/* reset do CSS */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
 body {
-    /*background-image: url('./background.jpg');*/
-    /*background-size: auto 100vh;*/
-    background-color: rgb(159, 63, 238);
+    background-image: url('../img/background.jpg');
+    background-size: auto 100vh;
+    /*background-color: rgb(159, 63, 238);*/
     font-family: Arial;
-    /*height: 100vh;*/
+    height: 100vh;
+    font-size: 12px;
+}
+
+/* breakpoint (pontos de quebra, que precisam de um reajuste) */
+/* Se a tela possuir, pelo menos, 400px */
+@media (min-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+/* Se a tela possuir, pelo menos, 600px */
+@media (min-width: 600px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+/* Se a tela possuir, pelo menos, 1200px */
+@media (min-width: 600px) {
+    body {
+        font-size: 20px;
+    }
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu {
     background-color:  rgb(255, 255, 255);
+    position: fixed;
+    top: 0;
+    width: 100vw;
 }
 
 .menu li {
@@ -19,8 +60,13 @@ body {
     justify-content: space-around;
 }
 
+.menu a {
+    display: block;
+    padding: 10px 20px;
+}
+
 a {
-    color: rgb(159, 63, 238);
+    color: rgb(18, 163, 207);
     text-decoration: none;
 }
 
@@ -34,6 +80,15 @@ a:hover {
     text-align: center;
 }
 
+.site-title {
+    font-size: 3em;
+}
+
 .site-subtitle {
     font-style: italic;
+}
+
+.img-portfolio {
+    width: 180px;
+    height: 180px;
 }
